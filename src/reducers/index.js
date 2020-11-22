@@ -6,7 +6,6 @@ import {
 
 export const rootReducer = (state, action) => {
 	const originalState = state;
-	console.log("state original, ", originalState.count);
 	switch (action.type) {
 		case INCREMENT_COUNTER:
 			return {

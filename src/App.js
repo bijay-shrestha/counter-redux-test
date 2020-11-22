@@ -11,7 +11,6 @@ export default class App extends React.PureComponent {
 	};
 
 	handleDecrement = (currentCount, number) => {
-		console.log("decrementing .. ", currentCount);
 		return Number(currentCount) > 0
 			? store.dispatch(decrement(number))
 			: alert("Cannot be decreased!");
@@ -20,8 +19,8 @@ export default class App extends React.PureComponent {
 	handleReset = (number) => store.dispatch(reset(number));
 
 	render() {
-    const { count } = store.getState();
-    
+		const { count } = store.getState();
+
 		return (
 			<>
 				<h1>{count}</h1>
